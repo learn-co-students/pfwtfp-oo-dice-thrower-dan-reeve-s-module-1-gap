@@ -26,16 +26,24 @@ is gone and in your belly, but there's a subtle stylistic difference
 Write your implementation in `lib/dice_thrower.rb`.
 
 * Create a `Die` class
-  * It should be initializable with a "pip" count. A "pip" is the "dot" on the side of a die. The pip count you initialize a Die with is the largest number the die can create.
-  * If it is initialized without a pip count, it should default to 6 (a classic, cubical die)
-    dots on the side of the die)
+  * It should be initializable with a "pip" count
+    * A "pip" is the "dot" on the side of a die
+    * The pip count you initialize a `Die` with is the largest number the `Die` can create
+  * If the `Die` is initialized _without_ a pip count, it should default to `6` (a classic, cubical die) dots on the side of the die)
   * `max_pips` should be accessible via `attr_reader`
-  * `roll` should be a method on `Die` which returns a random pip value. The `Die` knows its own `max_pips` so we can expect this `Number` to be between 1 and `max_pips`
+  * A method `pips` should return `max_pips`.
+  * A method called `roll` should return a random pip value. The `Die` knows its own `max_pips` so we can expect this `Number` to be between 1 and `max_pips`
 * Create a `DiceRoller` class
-  * It should be initializable with a number of die count 
+  * It should be initializable with two arguments:
+    * **REQUIRED**: the number of dice that should be created
+    * **OPTIONAL**: the number of pips each die should have as its maximum. If
+      it is not provided, the count should default to `6`
   * By default it should initialize with a set of 1 instance of `Die`
   * The `generate_set` method should return an `Array` of the initialized number
     of dice
+  * It should store the results of `generate_set` in an instance variable
+  * It should implement a method called `dice` that returns the generated set
+    stored in the previous step
 
 ## Conclusion
 

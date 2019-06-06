@@ -23,6 +23,8 @@ is gone and in your belly, but there's a subtle stylistic difference
 
 ## Create Object Oriented Dice Thrower Application
 
+Write your implementation in `lib/dice_thrower.rb`.
+
 * Create a `Die` class
   * It should be initializable with a "pip" count. A "pip" is the "dot" on the side of a die. The pip count you initialize a Die with is the largest number the die can create.
   * If it is initialized without a pip count, it should default to 6 (a classic, cubical die)
